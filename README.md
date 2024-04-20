@@ -23,7 +23,7 @@ This web application demonstrates user authentication using Passport.js and sess
 ## Installation
 
 1. Clone the repository: git clone https://github.com/evangelopolot/PassportAuth-Web-App.git
-2. Navigate to the project directory: `cd your-repo`
+2. Navigate to the project directory
 3. Install the dependencies: `npm install`
 4. Set up environment variables
 5. Start the application: `npm start`
