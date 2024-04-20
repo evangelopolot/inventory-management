@@ -1,6 +1,6 @@
 # Web App with Passport Authentication
 
-This web application demonstrates user authentication using Passport.js and session management. It allows users to log in securely and maintains their session throughout their interaction with the application.
+This web application uses Passport.js and session management to authenticate users. It allows users to log in securely and maintains their session throughout their interaction with the application.
 
 ## Technologies Used
 
