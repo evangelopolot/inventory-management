@@ -35,19 +35,3 @@ This web application demonstrates user authentication using Passport.js and sess
 - Log in with your registered credentials.
 <!-- - Access protected routes that require authentication.
 - Log out to end your session. -->
-
-## Project Structure
-
-- `config/`: Contains configuration files for the database and Passport.js.
-- `models/`: Defines the MongoDB schema for the User model.
-- `routes/`: Contains route handlers for authentication and other application routes.
-- `views/`: Contains EJS templates for rendering HTML views.
-- `.env`: Stores environment variables (not included in version control).
-- `.gitignore`: Specifies files and directories to be ignored by Git.
-- `app.js`: The main entry point of the application.
-- `package.json`: Manages project dependencies and scripts.
-- `README.md`: Provides information and instructions for the project.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
