@@ -1,0 +1,40 @@
+extends base.pug
+
+block content
+    //- Navigation Side Bar
+    include includes/side-nav 
+
+    .home-content
+        .content-top-bar
+            h1.top-bar-title Dashboard
+            .left-side
+                .search-bar
+                    | search
+                .notifications
+                .user-profile-card
+                    img.user-img(src='https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80' alt='')
+                    .user-info
+                        h3.user-info-name Alex Meian
+                        p.user-info-occupation Web Developer
+        .content
+            .overview
+                h2.overview-title Overview
+                .overview-cards
+                    .overview-card
+                        h2 Card-1
+                    .overview-card
+                        h2 Card-2
+                    .overview-card
+                        h2 Card-3
+                    .overview-card
+                        h2 Card-4
+            .revenue
+                .revenue-view
+                    h2 Monlty Revenue
+                .placeholder-ad
+                    h2 Ad
+            .activities
+                .recent-activites
+                    h2 Activites
+                .recent-invoices
+                    h2 Recent Invoices       
