@@ -1,4 +1,5 @@
 const Users = require("../../models/userModel");
+const passport = require("passport");
 
 /**
  * Creates a new users
@@ -51,7 +52,9 @@ exports.logout = (req, res) => {
 };
 
 exports.login = (req, res) => {
-  res.sendStatus(200);
+  // Authentication successful, user is already logged in at this point
+  console.log("User logged in:", req.user);
+  return res.render("user-homepage", { user: req.user });
 };
 
 exports.status = (req, res) => {
