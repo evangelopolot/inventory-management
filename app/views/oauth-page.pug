@@ -1,0 +1,77 @@
+extends base.pug
+
+block content
+    <body>
+        <div class="container">
+            <div class="form-links">
+                <button class="btn sign-in btn-active">Sign In</button>
+                <button class="btn sign-up">Sign Up</button>
+            </div>
+            <div class="form-container-sign-in">
+                <div class="oauth-btns">
+                    <a href="" class="oauth-btn">
+                        <i class="fab fa-google"></i>
+                        <span>Continue with Google</span>
+                    </a>
+                    <a href="" class="oauth-btn">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Continue with Discord</span>
+                    </a>
+                </div>
+
+
+                <div class="separator">
+                    <div></div>
+                    <p>or</p>
+                    <div></div>
+                </div>
+
+                <form action="api/v1/users/login" method="post" class="sign-in-form">
+                    <label for="">Username</label>
+                    <input name="username" type="text" placeholder="Username">
+                    <label for="">Password</label>
+                    <div class="password-input">
+                        <input name="password" type="password" id="password" placeholder="Password" required>
+                        <i class="toggle-password fas fa-eye"></i>
+                    </div>
+
+                    <button id="submit" type="submit" class="submit">Sign In</button>
+                    <a href="" class="forgot-password-link">Forgotten your password?</a>
+                </form>
+            </div>
+            <div class="form-container-sign-up">
+                <div class="oauth-btns">
+                    <a href="" class="oauth-btn">
+                        <i class="fab fa-google"></i>
+                        <span>Continue with Google</span>
+                    </a>
+                    <a href="" class="oauth-btn">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Continue with Discord</span>
+                    </a>
+                </div>
+
+
+                <div class="separator">
+                    <div></div>
+                    <p>or</p>
+                    <div></div>
+                </div>
+                <form class="sign-up-form" action='api/v1/users/signUp' method="post">
+                    <label for="">Username</label>
+                    <input name="username" type="text" placeholder="Username">
+                    <label for="">Email</label>
+                    <input name="email" type="text" placeholder="Email">
+                    <label for="">Name</label>
+                    <input name="name" type="text" placeholder="name">
+                    <label for="">Password</label>
+                    <div class="password-input">
+                        <input name="password" type="password" id="password" placeholder="Password" required>
+                        <i class="toggle-password fas fa-eye"></i>
+                    </div>
+                    <button class="submit">Sign Up</button>
+                </form>
+            </div>
+            <script src="script.js"></script>
+        </div>
+    </body>
