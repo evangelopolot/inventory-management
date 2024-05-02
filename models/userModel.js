@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema({
   name: {
     type: String,
     trim: true,
-    required: [true, "Must provide a last name"],
+    required: [true, "Must provide a name"],
   },
   email: {
     type: String,
@@ -34,6 +34,11 @@ const userSchema = new mongoose.Schema({
     required: [true, "A user must have a password"],
     minlength: [6, "Password must be at least 6 characters long"],
     select: false,
+  },
+  role: {
+    type: String,
+    enum: ["user", "admin"],
+    default: "user", // Set default role
   },
   createdAt: {
     type: Date,

@@ -3,6 +3,8 @@ extends base.pug
 block content
     <body>
         <div class="container">
+            if message
+                .error-message= message
             <div class="form-links">
                 <button class="btn sign-in btn-active">Sign In</button>
                 <button class="btn sign-up">Sign Up</button>
@@ -26,9 +28,9 @@ block content
                     <div></div>
                 </div>
 
-                <form action="api/v1/users/login" method="post" class="sign-in-form">
+                <form class="sign-in-form">
                     <label for="">Username</label>
-                    <input name="username" type="text" placeholder="Username">
+                    <input id="username" name="username" type="text" placeholder="Username">
                     <label for="">Password</label>
                     <div class="password-input">
                         <input name="password" type="password" id="password" placeholder="Password" required>
@@ -69,9 +71,8 @@ block content
                         <input name="password" type="password" id="password" placeholder="Password" required>
                         <i class="toggle-password fas fa-eye"></i>
                     </div>
-                    <button class="submit">Sign Up</button>
+                    <button type="submit" class="submit">Sign Up</button>
                 </form>
             </div>
-            <script src="script.js"></script>
         </div>
     </body>

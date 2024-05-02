@@ -1,6 +1,7 @@
 const passport = require("passport");
 const { Strategy } = require("passport-local");
 const Users = require("../../models/userModel");
+const AppError = require("../utils/appError");
 
 // User get saved to session - store user id to session data
 passport.serializeUser((user, done) => {
@@ -34,15 +35,15 @@ passport.use(
       const user = await Users.findOne({ username: username }).select(
         "+password"
       );
-      if (!user) throw new Error("User not found");
+      if (!user) return new AppError("User not found", 404);
       const isMatch = await user.correctPassword(password, user.password);
       if (!isMatch) throw new Error("Invalid Credentials");
 
       // If all is correct and user is identified
-      done(null, user);
+      return done(null, user);
     } catch (error) {
       // No user identified, pass in the err instance for passport to handle
-      done(error, null);
+      return done(error, null, { message: "Emal or password is incorrect" });
     }
   })
 );
