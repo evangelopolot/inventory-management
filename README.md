@@ -1,4 +1,4 @@
-# Web App with Passport Authentication
+# Authentication System using Oauth Passport Authentication
 
 This web application uses Passport.js and session management to authenticate users. It allows users to log in securely and maintains their session throughout their interaction with the application.
 
