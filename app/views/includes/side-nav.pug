@@ -31,8 +31,9 @@ div.sidebar
             div.profile-details
                 img(src="assets/kh.gif", alt="")
                 div.name-job
-                    div.name #{user.name}
+                    //- div.name #{user.name}
                     div.job Web developer
             a.logout-btn(href="api/v1/users/logout")
                 i.bx.bx-log-out#logout
+script(src='/scripts/dashboard-script.js')
 

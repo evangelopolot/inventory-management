@@ -1,10 +1,10 @@
-const passport = require("passport");
-const { Strategy } = require("passport-local");
-const Users = require("../../models/userModel");
-const AppError = require("../utils/appError");
+import Passport from "passport";
+import { Strategy } from "passport-local";
+import User from "../../models/userModel.mjs";
+import AppError from "../utils/appError.mjs";
 
 // User get saved to session - store user id to session data
-passport.serializeUser((user, done) => {
+Passport.serializeUser((user, done) => {
   console.log("Passport-Serialize");
   //   console.log(user);
   // Use something unique to the user so it can be found in a database
@@ -13,11 +13,11 @@ passport.serializeUser((user, done) => {
 });
 
 // Unpackes the user - and store that use to the req object itself
-passport.deserializeUser(async (id, done) => {
+Passport.deserializeUser(async (id, done) => {
   console.log("Passport-Deserilizer");
   console.log("User id: ", id);
   try {
-    const user = await Users.findById(id);
+    const user = await User.findById(id);
     console.log("Passport-Deserilizer" + user);
     if (!user) throw new Error("User not found");
     done(null, user);
@@ -27,25 +27,25 @@ passport.deserializeUser(async (id, done) => {
 });
 
 // This validates the user
-passport.use(
+Passport.use(
   new Strategy(async (username, password, done) => {
     console.log("The username that passport picked up: ", username);
     console.log("The password that passport picked up: ", password);
     try {
-      const user = await Users.findOne({ username: username }).select(
+      const user = await User.findOne({ username: username }).select(
         "+password"
       );
-      if (!user) return new AppError("User not found", 404);
+      if (!user) throw new AppError("User not found", 404);
       const isMatch = await user.correctPassword(password, user.password);
-      if (!isMatch) throw new Error("Invalid Credentials");
+      if (!isMatch) throw new AppError("Invalid Credentials", 404);
 
       // If all is correct and user is identified
       return done(null, user);
     } catch (error) {
       // No user identified, pass in the err instance for passport to handle
-      return done(error, null, { message: "Emal or password is incorrect" });
+      return done(error, null);
     }
   })
 );
 
-module.exports = passport;
+export default Passport;

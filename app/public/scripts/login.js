@@ -1,25 +1,25 @@
-import axios from "axios";
-import { showAlert } from "./alerts";
+import axios from "https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm";
+import { showAlert } from "./alerts.js";
 
 export const login = async (username, password) => {
   try {
-    console.log("Calling login API");
     const res = await axios({
       method: "POST",
-      url: "http:localhost:8000/api/v1/users/login",
+      url: "/api/v1/users/login",
       data: {
         username,
         password,
       },
     });
+    console.log("why is this not working?" + res.data);
 
     if (res.data.status === "success") {
-      console.log("Logged in successfully");
+      showAlert("success", "Logged in successfully!");
       window.setTimeout(() => {
         location.assign("/user-homepage");
       }, 1500);
     }
   } catch (err) {
-    console.log(err.response.data.message);
+    showAlert("error", err.response.data.message);
   }
 };

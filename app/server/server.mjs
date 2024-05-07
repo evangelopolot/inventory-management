@@ -1,7 +1,7 @@
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-dotenv.config();
-const app = require("../app");
+import mongoose from "mongoose";
+import { config } from "dotenv";
+config();
+import app from "../app.mjs";
 
 // Connect to the database
 const DB = process.env.DATABASE;

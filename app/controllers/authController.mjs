@@ -1,8 +1,8 @@
-const User = require("../../models/userModel");
-const AppError = require("../utils/appError");
-const catchAsyncError = require("../utils/catchAsync");
+import User from "../../models/userModel.mjs";
+import AppError from "../utils/appError.mjs";
+import catchAsyncError from "../utils/catchAsync.mjs";
 
-exports.signUp = async (req, res) => {
+export async function signUp(req, res) {
   try {
     const newUser = await User.create({
       username: req.body.username,
@@ -20,9 +20,9 @@ exports.signUp = async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-};
+}
 
-exports.logout = (req, res) => {
+export function logout(req, res) {
   console.log("logout hit");
   if (!req.user) return res.sendStatus(401);
   res.clearCookie("connect.sid");
@@ -36,24 +36,26 @@ exports.logout = (req, res) => {
     if (err) return res.sendStatus(401);
     res.send(200);
   });
-};
+}
 
-exports.login = (req, res) => {
+export function login(req, res) {
   // Assuming the user is authenticated successfully
-  res.redirect("/user-homepage");
-};
+  console.log("User authenticated successfully");
+  // res.redirect("/user-homepage");
+  res.status(200).json({ status: "success" });
+}
 
-exports.status = (req, res) => {
+export function status(req, res) {
   console.log("Inside /auth/status/ endpoint");
   return req.user ? res.send(req.user) : res.sendStatus(401);
-};
+}
 
-exports.getUsers = (req, res) => {
+export function getUsers(req, res) {
   const id = req.body.id;
   return User.findById(id);
-};
+}
 
-exports.getUserById = catchAsyncError(async (req, res, next) => {
+export const getUserById = catchAsyncError(async (req, res, next) => {
   try {
     const userId = req.params.id; // Assuming the user ID is passed as a route parameter
 
@@ -73,7 +75,7 @@ exports.getUserById = catchAsyncError(async (req, res, next) => {
 });
 
 // Create a middleware function to check authorisation
-exports.authorise = (...roles) => {
+export function authorise(...roles) {
   return (req, res, next) => {
     // roles is restricted to only admin roles
     // req.user.role gives us the role of the user from the protected middleware
@@ -85,12 +87,12 @@ exports.authorise = (...roles) => {
     }
     next();
   };
-};
+}
 
-exports.profile = (req, res) => {
+export function profile(req, res) {
   res.json({ user: req.user });
-};
+}
 
-exports.admin = (req, res) => {
+export function admin(req, res) {
   res.json({ user: req.user });
-};
+}

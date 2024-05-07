@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon ./app/server/server.js",
-    "test": "jest"
+    "start": "nodemon ./app/server/server.mjs",
+    "test": "jest",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "connect-flash": "^0.1.1",

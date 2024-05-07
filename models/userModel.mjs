@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
-const validator = require("validator"); // A library for validating email address
+import { Schema, model } from "mongoose";
 
-const userSchema = new mongoose.Schema({
+import bcrypt from "bcryptjs";
+import validate from "validator"; // A library for validating email address
+
+const userSchema = new Schema({
   username: {
     type: String,
     required: [true, "A user must have a unique username"],
@@ -27,7 +28,6 @@ const userSchema = new mongoose.Schema({
     unique: true,
     trim: true,
     lowercase: true,
-    validate: [validator.isEmail, "Please provide a valid email"],
   },
   password: {
     type: String,
@@ -68,5 +68,5 @@ userSchema.methods.correctPassword = async function (
 };
 
 //Compiles the Schema into a model which represents a document
-const User = mongoose.model("User", userSchema);
-module.exports = User; // Export the user model for CRUD Operations
+const User = model("User", userSchema);
+export default User; // Export the user model for CRUD Operations

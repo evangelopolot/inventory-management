@@ -1,16 +1,20 @@
-const express = require("express");
-const cookieParser = require("cookie-parser");
-const sessions = require("express-session");
-const viewRouter = require("./routes/viewRouter");
-const userRouter = require("./routes/usersRouter");
-const path = require("path");
-const passport = require("passport");
-const { log } = require("console");
-const AppError = require("./utils/appError");
-const globalErrorHandler = require("./controllers/errorController");
+import express from "express";
+import cookieParser from "cookie-parser";
+import sessions from "express-session";
+import viewRouter from "./routes/viewRouter.mjs";
+import userRouter from "./routes/usersRouter.mjs";
+import path from "path";
+import passport from "passport";
+import AppError from "./utils/appError.mjs";
+import globalErrorHandler from "./controllers/errorController.mjs";
+import flash from "connect-flash";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
+
 const app = express();
-const flash = require("connect-flash");
-const { status } = require("./controllers/authController");
 
 // Parse application/json
 app.use(express.json());
@@ -65,4 +69,4 @@ app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 app.use(globalErrorHandler);
-module.exports = app;
+export default app;
