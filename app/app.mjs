@@ -9,21 +9,29 @@ import AppError from "./utils/appError.mjs";
 import globalErrorHandler from "./controllers/errorController.mjs";
 import flash from "connect-flash";
 import { fileURLToPath } from "url";
+import morgan from "morgan";
 
 const __filename = fileURLToPath(import.meta.url);
-
 const __dirname = path.dirname(__filename);
 
 const app = express();
-
 // Parse application/json
 app.use(express.json());
-
 // Parse application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
-
 // Read the cookies
 app.use(cookieParser("the secret"));
+
+// Middleware to log the request
+const skip = (req, res) => {
+  return (
+    req.url.startsWith("/css") ||
+    req.url.startsWith("/scripts") ||
+    req.url === "/favicon.ico"
+  );
+};
+const customFormat = ":method :url :status - :response-time ms";
+app.use(morgan(customFormat, { skip: skip }));
 
 // Create sessions
 app.use(
@@ -36,6 +44,7 @@ app.use(
     },
   })
 );
+
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
@@ -58,6 +67,9 @@ app.set("views", path.join(__dirname, "views"));
 
 // Serving static files
 app.use(express.static(path.join(__dirname, "public")));
+app.get("/favicon.ico", (req, res) => {
+  res.status(204).end(); // Return empty response
+});
 
 // Mount the Routes
 app.use("/", viewRouter);

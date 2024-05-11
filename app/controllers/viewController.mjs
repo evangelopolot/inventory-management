@@ -1,11 +1,20 @@
+import logger from "../utils/logger.mjs";
+
 export function getAuthPage(req, res) {
-  console.log(req.session);
-  console.log(req.session.id);
+  logger.info("User visiting the OAuth page."),
+    {
+      requestedBy: req,
+    };
   res.status(200).render("oauth-page");
 }
 
 export function getUserDashboard(req, res) {
-  console.log(req.session);
-  console.log(req.session.id);
+  logger.info(
+    "User successfully authenticated. Redirecting to user homepage.",
+    {
+      userId: req.user._id,
+      username: req.user.username,
+    }
+  );
   res.status(200).render("user-homepage");
 }

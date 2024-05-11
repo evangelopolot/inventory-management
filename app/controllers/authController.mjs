@@ -1,6 +1,7 @@
 import User from "../../models/userModel.mjs";
 import AppError from "../utils/appError.mjs";
 import catchAsyncError from "../utils/catchAsync.mjs";
+import logger from "../utils/logger.mjs";
 
 export async function signUp(req, res) {
   try {
@@ -39,8 +40,11 @@ export function logout(req, res) {
 }
 
 export function login(req, res) {
-  // Assuming the user is authenticated successfully
-  console.log("User authenticated successfully");
+  // Logging a message with additional metadata
+  logger.info("User authenticated successfully", {
+    userId: req.user._id,
+    username: req.user.username,
+  });
   // res.redirect("/user-homepage");
   res.status(200).json({ status: "success" });
 }
