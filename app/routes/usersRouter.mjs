@@ -27,15 +27,11 @@ const authorise = (role) => {
 };
 
 router.post("/signUp", authController.signUp);
-router.post(
-  "/login",
-  passport.authenticate("local"),
-  authController.login
-);
+router.post("/login", passport.authenticate("local"), authController.login);
 router.get("/status", authController.status);
 router.get("/admin", authorise("admin"), authController.admin);
 router.get("/profile", authorise("user"), authController.profile);
-router.post("/logout", authorise("user"), authController.logout);
+router.get("/logout", authController.logout);
 router.get("/:id", authController.getUserById);
 
 export default router;

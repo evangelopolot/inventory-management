@@ -1,7 +1,7 @@
 import logger from "../utils/logger.mjs";
 
 export function getAuthPage(req, res) {
-  logger.info("User visiting the OAuth page."),
+  logger.debug("User visiting the OAuth page."),
     {
       requestedBy: req,
     };
@@ -9,12 +9,9 @@ export function getAuthPage(req, res) {
 }
 
 export function getUserDashboard(req, res) {
-  logger.info(
-    "User successfully authenticated. Redirecting to user homepage.",
-    {
-      userId: req.user._id,
-      username: req.user.username,
-    }
-  );
+  logger.debug("Redirecting to user homepage.", {
+    userId: req.user._id,
+    username: req.user.username,
+  });
   res.status(200).render("user-homepage");
 }

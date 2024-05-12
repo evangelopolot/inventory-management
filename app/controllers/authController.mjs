@@ -24,18 +24,19 @@ export async function signUp(req, res) {
 }
 
 export function logout(req, res) {
-  console.log("logout hit");
+  // Checks if user is authenticated
   if (!req.user) return res.sendStatus(401);
+
+  // Clear the session cookie
   res.clearCookie("connect.sid");
+
   req.logout(function (err) {
     if (err) return res.sendStatus(401);
     req.session.destroy(function (err) {
-      res.send();
+      if (err) return res.sendStatus(401);
+      logger.info("User logged out successfully");
+      return res.status(200).json({ status: "success" });
     });
-  });
-  req.logout((err) => {
-    if (err) return res.sendStatus(401);
-    res.send(200);
   });
 }
 

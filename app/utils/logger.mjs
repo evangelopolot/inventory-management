@@ -28,7 +28,7 @@ const simpleFormat = format.combine(
 );
 
 const logger = createLogger({
-  level: "info",
+  level: "debug",
 });
 
 addColors({
