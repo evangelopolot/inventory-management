@@ -1,0 +1,440 @@
+{"level":"info","message":"This is an informational message","service":"user-service"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":123,"username":"john_doe"}
+{"level":"info","message":"This is an informational message","service":"user-service"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":123,"username":"john_doe"}
+{"level":"info","message":"This is an informational message","service":"user-service"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":{"__v":0,"_id":"66295697bce613cad976b0ae","createdAt":"2024-04-24T18:59:01.824Z","email":"user@mail.com","name":"user","password":"$2a$12$qsAXeFjku2cN7WMAqbl.hObpIBzXq4VrY2NFzXw9Y7MAzX5ltN2/i","role":"user","username":"user10"},"username":"user10"}
+{"level":"info","message":"This is an informational message","service":"user-service"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":"66295697bce613cad976b0ae","username":"user10"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":"66295697bce613cad976b0ae","username":"user10"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":"66295697bce613cad976b0ae","username":"user10"}
+{"level":"warn","message":"This is a warning message","service":"user-service"}
+{"level":"error","message":"This is an error message","service":"user-service"}
+{"level":"info","message":"User created","service":"user-service","userId":"66295697bce613cad976b0ae","username":"user10"}
+{"level":"info","message":"DB connection successful","service":"user-service"}
+{"level":"info","message":"DB connection successful","service":"user-service"}
+{"level":"\u001b[32minfo\u001b[39m","message":"\u001b[32mDB connection successful\u001b[39m","service":"user-service"}
+{"level":"\u001b[32minfo\u001b[39m","message":"\u001b[32mDB connection successful\u001b[39m","service":"user-service"}
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+[33m[32minfo[39m[0m: [32mDB connection successful[39m
+2024-05-09T18:40:52.220Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:43:08.142Z [32minfo[39m: DB connection successful
+2024-05-09T18:43:15.213Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:44:51.351Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:47:57.663Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:47:57.672Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:56:17.942Z [32minfo[39m: [32mApp is running on port 8080...[39m (req, res, next) => {
+  logger.info(
+    `${req.method} ${req.protocol}://${req.get("host")}${req.originalUrl}`
+  );
+  next();
+}
+2024-05-09T18:56:17.953Z [32minfo[39m: [32mDB connection successful[39m (req, res, next) => {
+  logger.info(
+    `${req.method} ${req.protocol}://${req.get("host")}${req.originalUrl}`
+  );
+  next();
+}
+2024-05-09T18:56:47.152Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:56:47.165Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:57:27.167Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:57:27.178Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:57:39.243Z [32minfo[39m: [32mApp is running on port 8080...[39m [object Object]
+2024-05-09T18:57:39.253Z [32minfo[39m: [32mDB connection successful[39m [object Object]
+2024-05-09T18:57:55.688Z [32minfo[39m: [32mApp is running on port 8080...[39m [object Object]
+2024-05-09T18:57:55.698Z [32minfo[39m: [32mDB connection successful[39m [object Object]
+2024-05-09T18:58:05.226Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:58:05.241Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:58:26.221Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:58:26.244Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:58:46.123Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:58:46.139Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T18:59:28.786Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T18:59:28.802Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:00:46.894Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:00:46.905Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:00:48.874Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:00:48.882Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:02:43.990Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:02:43.999Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:03:06.720Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:03:06.730Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:03:06.731Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:03:21.308Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:03:21.317Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:03:21.318Z [32minfo[39m: [32mChildLogger DB connection successful[39m
+2024-05-09T19:04:09.310Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:04:09.323Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:04:09.324Z [32minfo[39m: [32mChildLogger DB connection successful[39m
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service',
+  timestamp: '2024-05-09T19:05:27.693Z'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m',
+  timestamp: '2024-05-09T19:05:27.705Z'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m',
+  timestamp: '2024-05-09T19:05:27.705Z'
+}
+2024-05-09T19:06:02.501Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T19:06:02.522Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T19:06:02.523Z [32minfo[39m: [32mChildLogger DB connection successful[39m
+2024-05-09T21:23:47.702Z [32minfo[39m: [32mApp is running on port 8080...[39m
+2024-05-09T21:23:47.716Z [32minfo[39m: [32mDB connection successful[39m
+2024-05-09T21:23:47.717Z [32minfo[39m: [32mChildLogger DB connection successful[39m
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service',
+  timestamp: '2024-05-09T21:31:36.811Z'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:31:36.822Z'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:31:36.822Z'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service',
+  timestamp: '2024-05-09T21:38:50.923Z'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:38:50.933Z'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:38:50.934Z'
+}
+{
+  message: 'App is running on port 8080...',
+  level: 'info',
+  service: 'user-service',
+  timestamp: '2024-05-09T21:39:03.342Z'
+}
+{
+  service: 'user-service',
+  level: 'info',
+  message: 'DB connection successful',
+  timestamp: '2024-05-09T21:39:03.353Z'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: 'info',
+  message: 'ChildLogger DB connection successful',
+  timestamp: '2024-05-09T21:39:03.353Z'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service',
+  timestamp: '2024-05-09T21:39:10.578Z'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:39:10.742Z'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:39:10.744Z'
+}
+{
+  message: '\x1B[32mApp is running on port 8080...\x1B[39m',
+  level: '\x1B[32minfo\x1B[39m',
+  service: 'user-service',
+  timestamp: '2024-05-09T21:39:38.075Z'
+}
+{
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mDB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:39:38.086Z'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: '\x1B[32minfo\x1B[39m',
+  message: '\x1B[32mChildLogger DB connection successful\x1B[39m',
+  timestamp: '2024-05-09T21:39:38.087Z'
+}
+{
+  message: 'App is running on port 8080...',
+  level: 'info',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: 'info',
+  message: 'DB connection successful'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: 'info',
+  message: 'ChildLogger DB connection successful'
+}
+{
+  message: 'App is running on port 8080...',
+  level: 'info',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: 'info',
+  message: 'DB connection successful'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: 'info',
+  message: 'ChildLogger DB connection successful'
+}
+{
+  message: 'App is running on port 8080...',
+  level: 'info',
+  service: 'user-service'
+}
+{
+  service: 'user-service',
+  level: 'info',
+  message: 'DB connection successful'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: 'info',
+  message: 'ChildLogger DB connection successful'
+}
+{
+  message: 'App is running on port 8080...',
+  level: 'info',
+  service: 'user-service',
+  label: 'winston custom format',
+  timestamp: 'May-09-2024 22:50:05'
+}
+{
+  service: 'user-service',
+  level: 'info',
+  message: 'DB connection successful',
+  label: 'winston custom format',
+  timestamp: 'May-09-2024 22:50:05'
+}
+{
+  method: 'GET',
+  url: '/auth/status',
+  protocol: 'http',
+  host: 'localhost:3000',
+  service: 'user-service',
+  level: 'info',
+  message: 'ChildLogger DB connection successful',
+  label: 'winston custom format',
+  timestamp: 'May-09-2024 22:50:05'
+}
