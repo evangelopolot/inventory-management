@@ -1,8 +1,7 @@
 import express from "express";
 import passport from "passport";
-import * as authController from "../controllers/authController.mjs";
-import { check } from "express-validator";
 import localStrategy from "../strategies/local-strategy.mjs";
+import * as authController from "../controllers/authController.mjs";
 
 const router = express.Router();
 // Can this code be improved?
@@ -28,10 +27,6 @@ const authorise = (role) => {
 
 router.post("/signUp", authController.signUp);
 router.post("/login", passport.authenticate("local"), authController.login);
-router.get("/status", authController.status);
-router.get("/admin", authorise("admin"), authController.admin);
-router.get("/profile", authorise("user"), authController.profile);
 router.get("/logout", authController.logout);
-router.get("/:id", authController.getUserById);
 
 export default router;
